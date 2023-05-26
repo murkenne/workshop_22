@@ -1,0 +1,16 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: azure;
+}
+
+h1 {
+
+    color: blue;
+}
+#party-container {
+    color: blue;
+    text-align: center;
+
+}
