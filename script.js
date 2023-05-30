@@ -31,7 +31,7 @@ const getPartyById = async (id) => {
 };
 
 // delete party
-const deleteParty = async (id) => {
+const removeParty = async (id) => {
   // your code here
   try {
     const response = await fetch(`${Parties_API_URL}/${id}`, {
@@ -43,6 +43,18 @@ const deleteParty = async (id) => {
     console.error(deleteError);
   }
 };
+
+/*const removeParty = async (id) => {
+  try {
+    const response = await deleteParty(id);
+    console.log(response);
+    // re-render parties
+    const allParties = await getAllParties();
+    renderParties(allParties);
+  } catch (error) {
+    console.error(error);
+  }
+};*/
 
 // render a single party by id
 const renderSinglePartyById = async (id) => {
@@ -130,6 +142,8 @@ const renderParties = async (parties) => {
       const deleteButton = partyElement.querySelector('.delete-button');
       deleteButton.addEventListener('click', (event) => {
         // your code here
+         const index = parties.findIndex((party) => party.id === id);
+      parties.splice(index, 1);
         event.preventDefault();
        removeParty(id);
       });
