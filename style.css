@@ -1,6 +1,6 @@
 h1 {
       text-align: center;
-    color: blue;
+    color: light green;
 }
 
 
@@ -15,10 +15,10 @@ h1 {
   
   }
 
-#party-container:hover {
+body {
     text-align: center;
     background-color: #202f3f;
-    color: blue;
+    color: lightgreen;
     padding: 5px;
     border-radius: 5px;
     font-weight: bold;
